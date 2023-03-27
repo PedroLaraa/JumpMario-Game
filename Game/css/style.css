@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    background-color: blueviolet;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1013%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(64%2c 146%2c 209%2c 1)'%3e%3c/rect%3e%3cpath d='M1464 560L0 560 L0 292.7Q39.9 260.6%2c 72 300.5Q169.58 278.08%2c 192 375.66Q196.43 308.09%2c 264 312.51Q313.02 241.53%2c 384 290.55Q461.72 248.27%2c 504 325.99Q554.02 256.01%2c 624 306.04Q685.84 295.88%2c 696 357.72Q750.17 291.89%2c 816 346.07Q840.56 298.63%2c 888 323.2Q974.07 289.27%2c 1008 375.34Q1030.1 277.43%2c 1128 299.53Q1196.74 248.27%2c 1248 317.01Q1300.86 297.87%2c 1320 350.72Q1349.33 308.05%2c 1392 337.37Q1406.91 280.28%2c 1464 295.2z' fill='rgba(8%2c 41%2c 103%2c 1)'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 424.29Q10.02 362.31%2c 72 372.34Q125.31 305.65%2c 192 358.97Q270.78 317.75%2c 312 396.53Q372.75 385.28%2c 384 446.03Q411 401.02%2c 456 428.02Q480.03 380.05%2c 528 404.08Q568.63 324.7%2c 648 365.33Q690.47 335.8%2c 720 378.28Q765.52 351.8%2c 792 397.32Q853.14 386.47%2c 864 447.61Q867.65 379.26%2c 936 382.91Q960.02 334.94%2c 1008 358.96Q1063.38 342.35%2c 1080 397.73Q1134.78 380.51%2c 1152 435.3Q1174.7 386%2c 1224 408.7Q1258.1 322.79%2c 1344 356.89Q1418.17 311.06%2c 1464 385.24z' fill='rgba(42%2c 72%2c 121%2c 1)'%3e%3c/path%3e%3cpath d='M1488 560L0 560 L0 442.16Q58.36 380.52%2c 120 438.88Q205.38 404.26%2c 240 489.65Q270.51 448.16%2c 312 478.67Q320.78 415.45%2c 384 424.22Q465.47 433.69%2c 456 515.17Q510.29 449.45%2c 576 503.74Q606.59 414.33%2c 696 444.91Q742.22 419.13%2c 768 465.35Q818.48 443.83%2c 840 494.3Q855.66 437.96%2c 912 453.62Q961.81 383.43%2c 1032 433.23Q1089.53 418.76%2c 1104 476.29Q1136.81 389.1%2c 1224 421.91Q1297.55 375.46%2c 1344 449Q1410.6 443.6%2c 1416 510.2Q1437.28 459.48%2c 1488 480.76z' fill='%23356cb1'%3e%3c/path%3e%3cpath d='M1560 560L0 560 L0 529.31Q37.84 495.14%2c 72 532.98Q128.37 517.35%2c 144 573.72Q172.98 530.7%2c 216 559.68Q245.38 469.05%2c 336 498.43Q417.31 459.75%2c 456 541.06Q527.53 492.59%2c 576 564.11Q618.49 486.6%2c 696 529.09Q762.62 475.71%2c 816 542.32Q852.49 458.81%2c 936 495.29Q985.92 473.22%2c 1008 523.14Q1087.35 482.49%2c 1128 561.84Q1182.3 496.14%2c 1248 550.45Q1290.86 473.31%2c 1368 516.16Q1410.02 486.18%2c 1440 528.2Q1485.41 453.62%2c 1560 499.03z' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1013'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mario-title {
+    width: 100px;
+}
+
+.container-board {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    width: 70%;
+    height: 500px;
+    border-bottom: 5px solid rgb(191, 82, 82);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: .4rem;
+}
+
+.background-world {
+    position: absolute;
+    width: 100%;
+    height: 112%;
+}
+
+.game-over {
+    display: none;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    z-index: 1;
+    animation: clouds-walking 10s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0%;
+    width: 150px;
+    z-index: 2;
+}
+
+.jump {
+    animation: mario-jump 500ms ease-out;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+@keyframes mario-jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% { 
+        bottom: 180px
+    }
+
+    50% {
+        bottom: 180px
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+}
+
+@keyframes pipe-animation {
+    from {
+        right: 0%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-walking {
+
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+
+}
